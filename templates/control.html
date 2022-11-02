@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    控制语句
+{% endblock %}
+
+{% block body %}
+    {% if age > 18 %}
+    <div>
+        成年
+    </div>
+{% elif age < 18 %}
+    <div>
+        未成年
+    </div>
+{% else %}
+    <div>
+        刚刚成年
+    </div>
+{% endif %}
+
+<ul>
+    {% for book in books  %}
+    <li>{{ book }}</li>
+    {% endfor %}
+</ul>
+
+{% for key,value in person.items() %}
+    <div>
+    {{ key }}:{{ value }}
+    </div>
+{% endfor %}
+{% endblock %}
