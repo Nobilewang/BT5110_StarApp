@@ -10,7 +10,14 @@ A sandbox application with Flask, SQLAlchemy and PostgreSQL
 
 ### Requirements
 
-- Python 3
-- Flask
+
+- flask
+- psycopg2-binary
+- email_validator
 - Flask-SQLAlchemy
-- flask-WTF
+- Flask_WTF
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- scipy
