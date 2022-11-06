@@ -461,4 +461,6 @@ def single_date_report():
     return render_template("single_date_report.html" , result=result_single_day)
 
 if __name__ == '__main__':
-    app.run()
+    # app.run()
+    from os import environ
+    app.run(host='0.0.0.0', debug=False, port=environ.get("PORT", 5432))
