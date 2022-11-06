@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+    {% block title %}
+    'Analysis In Date Dimension'
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/css/table.css">
+{% endblock stylesheets %}
+</head>
+<body>
+
+{% block body %}
+    <div class="content">
+    <h1>
+    </h1>
+    <form method="post">
+      <div class="form-group">
+            <label for="c-form-date">
+                <label for="c-form-date" class="form-label">Date:</label>
+            </label>
+            <input type="text" name="date" placeholder="na" class="form-control form-control-lg" id="date">
+          <label for="c-form-date" class="form-label" style="color:grey;font-size:10px">(ex:2017-01-01)</label>
+          <label for="c-form-storeid">
+                <label for="c-form-storeid" class="form-label">Store ID:</label>
+            </label>
+            <select name="storeid" class="form-control form-control-lg" id="c-form-storeid">
+                <option value="na">na</option>
+                <option value="S0012">S0012</option>
+                <option value="S0040">S0040</option>
+                <option value="S0002">S0002</option>
+                <option value="S0023">S0023</option>
+                <option value="S0050">S0050</option>
+                <option value="S0013">S0013</option>
+            </select>
+            <label for="c-form-productid" class="form-label">ProductID:</label>
+            <input type="text" name="productid" placeholder="na" class="c-form-productid-form-control" id="productid">
+            <label for="c-form-productid" class="form-label" style="color:grey;font-size:10px">(#P0001-P0748)</label>
+          <a href="/single_date" class="btn btn-primary btn-lg active" role="button" >   Make Another Search</a>
+
+      </div>
+        <ul>
+
+        </ul>
+        <ul>
+
+        </ul>
+        <ul>
+
+        </ul>
+        <ul>
+
+        </ul>
+    <label>
+            Average Revenue: {{ result }}
+        </label>
+        <ul>
+
+        </ul>
+        <ul>
+
+        </ul><ul>
+
+        </ul>
+
+    </form>
+          <a href="/date" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Check The Average Revenue Over Time Span</a>
+
+
+
+    <ul>
+        <h4>
+        This function is used to check the average revenue of the retail company in a single date, all or selected stores, and all or selected products:
+        </h4>
+        <li>
+            Average revenue of all stores with all products in a selected single date (i.e, "2017-01-02")
+            </li>
+                <li>
+            Average revenue of all stores with selected products (i.e, P0241) in a selected single date (i.e, "2017-01-02")
+            </li>
+                <li>
+           Average revenue of the selected store (i.e, S0050) with selected products (i.e, P0241) in a selected single date (i.e, "2017-01-02")
+            </li>
+                <li>
+            Average revenue of the selected store (i.e, S0050) with all products in selected store in a selected single date (i.e, "2017-01-02")
+        </li>
+        <h4>
+            ***None of above four selection method are supported, Nothing will output***
+        </h4>
+    </ul>
+
+    </div>
+{% endblock %}
+</body>

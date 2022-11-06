@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}
+    控制语句
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+    <h1>
+        Promotion Analysis based on Different Stores
+    </h1>
+
+    <table>
+    <tr>
+        {% for col in column_names %}
+        <th>{{col}}</th>
+        {% endfor %}
+    </tr>
+    {% for row in row_data %}
+    <tr>
+        {% for col, row_ in zip(column_names, row) %}
+{#        {% if col == link_column %}#}
+{#        <td>#}
+{#            <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button">#}
+{#                {{ row_ }}#}
+{#            </button>#}
+{#        </td>#}
+{#        {% else %}#}
+        <td>{{row_}}</td>
+{#        {% endif %}#}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    </table>
+        <li>
+        product_id - The unique identifier of a product.
+        </li>
+        <li>
+            baseline average sales - the average sales during non-promotion period.
+         </li>
+            <li>
+            Sales fluctuation before & after promotion - the difference in average sales before & after promotion period and baseline average sales.
+         </li>
+                <li>
+            Sales fluctuation during promotion - the difference in average sales during promotion period and baseline average sales.
+         </li>
+                    <li>
+            Net Sales fluctuation of promotion - the difference in between Sales fluctuation before & after promotion and Sales fluctuation during promotion.
+         </li>
+    <li>
+        Promotion Type - Type of promotion applied.
+    </li>
+    <h2>
+        Check the Plot of each selected product in its respective store:
+        </h2><h3>
+        P0051 is from S0002; P0129 is from S0012; P0261 is from S0013
+        </h3><h3>
+            P0129 is from S0023; P0565 is from S0040; P0689 is from S0050
+    </h3>
+    <form method="post">
+        <label for="c-form-productid">
+            <label for="c-form-productid" class="form-label">Store_id:</label>
+        </label>
+        <select name="productid" class="c-form-productid form-control" id="c-form-Storeid">
+            <option value="S0002">S0002</option>
+            <option value="S0012">S0012</option>
+            <option value="S0013">S0013</option>
+            <option value="S0023">S0023</option>
+            <option value="S0040">S0040</option>
+            <option value="S0050">S0050</option>
+        </select>
+
+      <button type="submit" class="btn btn-primary">Search</button>
+
+    </div>
+{#{% for key,value in person.items() %}#}
+{#    <div>#}
+{#    {{ key }}:{{ value }}#}
+{#    </div>#}
+{#{% endfor %}#}
+{% endblock %}
+

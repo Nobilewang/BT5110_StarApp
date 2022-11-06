@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+    {% block title %}
+    'about us'
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/css/table.css">
+{% endblock stylesheets %}
+</head>
+<body>
+
+{% block body %}
+    <div class="content">
+    <h1>
+        Store Analysis of the retail company
+    </h1>
+    <table>
+    <tr>
+        {% for col in column_names %}
+        <th>{{col}}</th>
+        {% endfor %}
+    </tr>
+    {% for row in row_data %}
+    <tr>
+        {% for col, row_ in zip(column_names, row) %}
+{#        {% if col == link_column %}#}
+{#        <td>#}
+{#            <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button">#}
+{#                {{ row_ }}#}
+{#            </button>#}
+{#        </td>#}
+{#        {% else %}#}
+        <td>{{row_}}</td>
+{#        {% endif %}#}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    </table>
+    <ul>
+        <li>
+            store_id - The unique identifier of a store.
+        </li>
+                <li>
+            store_size - The size of the store
+        </li>
+                        <li>
+            city_id - The location of each store
+        </li>
+                        <li>
+            Total_revenue - The total revenue of each store
+        </li>
+                        <li>
+            Total_sales - The total sales of each store
+        </li>
+    </ul>
+
+    </div>
+{% endblock %}
+</body>
+</html>

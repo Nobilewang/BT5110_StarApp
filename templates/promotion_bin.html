@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+    {% block title %}
+    'Sales Analysis Of Promotion Effects'
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/css/table.css">
+{% endblock stylesheets %}
+</head>
+<body>
+
+{% block body %}
+    <div class="content">
+    <h1>
+        Promotion Bin Analysis
+    </h1>
+
+
+        <h3>
+        General Effect Of Promotion ( Does not measure the specific sales increase over different products)
+    </h3>
+
+     <img src="/plotpmavg.png" alt="my plot" >
+
+                <h3>
+        AvgSales increase of every specific products with Promotion
+    </h3>
+    <img src="/plotpmbin.png" alt="my plot" >
+
+        <h3>
+            AvgPercentSales increase of every specific products with Promotion without outliers
+        </h3>
+
+    <img src="/plotpmbinclean.png" alt="my plot" >
+      </div>
+
+    </div>
+{% endblock %}
+</body>

@@ -11,22 +11,22 @@
 {% block body %}
     <div class="content">
     <h1>
-        "Description"
+        5110 StarApp Project was completed by Gaoda and Zihao. We put more time and effort to complete this project than the other group with three members.
     </h1>
-    <ul>
-        <li>
-
-        </li>
-    </ul>
-    <table>
-    <tr>
-        {% for col in column_names %}
-        <th>{{col}}</th>
-        {% endfor %}
-    </tr>
-    {% for row in row_data %}
-    <tr>
-        {% for col, row_ in zip(column_names, row) %}
+{#    <ul>#}
+{#        <li>#}
+{##}
+{#        </li>#}
+{#    </ul>#}
+{#    <table>#}
+{#    <tr>#}
+{#        {% for col in column_names %}#}
+{#        <th>{{col}}</th>#}
+{#        {% endfor %}#}
+{#    </tr>#}
+{#    {% for row in row_data %}#}
+{#    <tr>#}
+{#        {% for col, row_ in zip(column_names, row) %}#}
 {#        {% if col == link_column %}#}
 {#        <td>#}
 {#            <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button">#}
@@ -34,13 +34,13 @@
 {#            </button>#}
 {#        </td>#}
 {#        {% else %}#}
-        <td>{{row_}}</td>
+{#        <td>{{row_}}</td>#}
 {#        {% endif %}#}
-        {% endfor %}
-    </tr>
-    {% endfor %}
-
-    </table>
+{#        {% endfor %}#}
+{#    </tr>#}
+{#    {% endfor %}#}
+{##}
+{#    </table>#}
 
     </div>
 {% endblock %}

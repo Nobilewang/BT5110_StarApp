@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+    控制语句
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+    <h1>
+        hierarchy 1D based promotion effect analysis with its knock-on effect
+    </h1>
+    <table>
+    <tr>
+        {% for col in column_names %}
+        <th>{{col}}</th>
+        {% endfor %}
+    </tr>
+    {% for row in row_data %}
+    <tr>
+        {% for col, row_ in zip(column_names, row) %}
+{#        {% if col == link_column %}#}
+{#        <td>#}
+{#            <button type="submit" value={{ row_ }} name="person_id" form="patient_form" class="patient_button">#}
+{#                {{ row_ }}#}
+{#            </button>#}
+{#        </td>#}
+{#        {% else %}#}
+        <td>{{row_}}</td>
+{#        {% endif %}#}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+
+    </table>
+     <li>
+        hierarchy1 - Level 1 Barcode hierarchy of Product. The most general hierarchy. For Example: Foods and Beverages
+        </li> <li>
+        average_sales_of_selected_product_not_in_promo_period - The average sales of the selected product not in promotion period
+        </li> <li>
+        average_sales_of_selected_product_in_promo_period - The average sales of the selected product during promotion period
+        </li>
+         <li>
+        average_sale_of_other_products_not_in_selected_product_promo_period - The average sales of other products with the same hierarchy1 not in any products' promotion period.
+        </li>
+     <li>
+    average_sale_of_other_products_in_selected_product_promo_period - The average sales of other products with the same hierarchy1 during selected product promotion period but not in their own promotion period.
+    </li>
+
+
+
+    <h1>
+        hierarchy 1D based promotion effect analysis
+    </h1>
+    <img src="/plotk1.png" alt="my plotk1" >
+    <h1>
+        hierarchy 1D based knock-on effect under promotion period
+    </h1>
+    <img src="/plotk2.png" alt="my plotk2" >
+    </div>
+{#{% for key,value in person.items() %}#}
+{#    <div>#}
+{#    {{ key }}:{{ value }}#}
+{#    </div>#}
+{#{% endfor %}#}
+{% endblock %}

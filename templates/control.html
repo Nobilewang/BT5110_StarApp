@@ -5,29 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    {% if age > 18 %}
-    <div>
-        成年
-    </div>
-{% elif age < 18 %}
-    <div>
-        未成年
-    </div>
-{% else %}
-    <div>
-        刚刚成年
-    </div>
-{% endif %}
+    <div class="content">
 
-<ul>
-    {% for book in books  %}
-    <li>{{ book }}</li>
-    {% endfor %}
-</ul>
 
-{% for key,value in person.items() %}
-    <div>
-    {{ key }}:{{ value }}
+
+    <img src="/plot.png" alt="my plot" >
+        <ul>
+            <ul>
+
+            </ul>
+        </ul>
+    <a href="/date" class="btn btn-primary btn-lg active" role="button" >   Make Another Search</a>
     </div>
-{% endfor %}
 {% endblock %}

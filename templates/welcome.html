@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-image: url({{ url_for('static',filename='fade.jpg') }});
+             background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+            background-size: 100% 100%;
+        }
+        #start
+            {
+    width: 20em;  height: 20em;
+}
+
+    </style>
+    <title>Welcome Page</title>
+</head>
+<body>
+<div style="width: 900px  ; margin: 320px auto" >
+    <h1>Operation Analysis Of Turkish Retail Store
+</h1>
+</div>
+<div style="width: 300px  ; margin: 320px auto" >
+<a href="/login" class="btn btn-primary active" role="button" data-bs-toggle="button" aria-pressed="true" id="start">Get Started</a>
+</div>
+</body>
+</html>

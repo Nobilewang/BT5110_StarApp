@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+    {% block title %}
+    'Analysis In Date Dimension'
+{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="/static/css/table.css">
+{% endblock stylesheets %}
+</head>
+<body>
+
+{% block body %}
+    <div class="content">
+    <h1>
+        Product Categorical Analysis based on hierarchy ID
+    </h1>
+        <h2>
+            hierarchy is the Barcode hierarchy of Product.
+        </h2>
+        <h2>
+            hierarchy1_id means the most general hierarchy. For Example: Foods and Beverages
+        </h2>
+        <h2>
+            hierarchy2_id is the second level. For Example: Beverages
+        </h2>
+
+
+    <form method="post">
+      <div class="form-group">
+            <label for="c-form-hierarchy">
+                <label for="c-form-hierarchy" class="form-label">Hierarchy Level:</label>
+            </label>
+            <select name="hierarchy" class="c-form-hierarchy form-control" id="c-form-hierarchy">
+                <option value="hierarchy1_id">hierarchy1</option>
+                <option value="hierarchy2_id">hierarchy2</option>
+            </select>
+
+      <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+
+    </form>
+
+    <ul>
+        <li>
+            The total sales and total revenue of all products in all stores group by categories of the selected hierarchy level are calculated.
+        </li>
+    </ul>
+
+    </div>
+{% endblock %}
+</body>
